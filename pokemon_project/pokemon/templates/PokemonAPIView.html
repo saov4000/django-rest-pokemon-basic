@@ -1,0 +1,20 @@
+<!-- templates/pokemon/pokemon_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pokemon.name | capitalize }} Details</title>
+</head>
+<body>
+    <h1>{{ pokemon.name | capitalize }}</h1>
+    <p>Height: {{ pokemon.height }}</p>
+    <p>Weight: {{ pokemon.weight }}</p>
+    <h2>Abilities:</h2>
+    <ul>
+        {% for ability in pokemon.abilities %}
+            <li>{{ ability }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
